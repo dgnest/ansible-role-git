@@ -1,0 +1,14 @@
+---
+
+# vars file for git
+
+_git_package_dependencies:
+  - "git"
+
+# _git_dependencies:
+#   - name: "name"
+#     version: "version"
+
+# _git_pip_dependencies:
+#   - name: "name"
+#     version: "version"
