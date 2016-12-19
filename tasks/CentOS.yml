@@ -2,7 +2,7 @@
 # tasks file for git (CentOS specific)
 
 - name: Install git packages
-  become: yes
+  become: true
   yum:
     name: "{{ item }}"
     state: present
