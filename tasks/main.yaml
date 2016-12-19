@@ -1,8 +1,8 @@
 ---
 
-- include: load.yml
+- include: load.yaml
 
-- include: apps.yml
+- include: apps.yaml
 
 - include: host.yaml
 

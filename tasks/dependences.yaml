@@ -7,7 +7,7 @@
     state: present
   register: install_git_package_dependencies
   when: _git_package_dependencies is defined
-  with_items: _git_package_dependencies
+  with_items: "{{ _git_package_dependencies | default([]) }}"
   tags:
     - git
     - apt
@@ -21,7 +21,7 @@
     state: present
   register: install_git_dependencies
   when: _git_dependencies is defined
-  with_items: _git_dependencies
+  with_items: "{{ _git_dependencies | default({}) }}"
   tags:
     - apt
     - dependencies
