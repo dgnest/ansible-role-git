@@ -1,7 +1,7 @@
 ---
 
 - name: Install git package dependencies
-  sudo: yes
+  become: true
   apt:
     name: "{{ item }}"
     state: present
@@ -15,7 +15,7 @@
 - debug: var=install_git_package_dependencies.stdout_lines
 
 - name: Install git dependencies
-  sudo: yes
+  become: true
   apt:
     name: "{{ item.name }}"
     state: present

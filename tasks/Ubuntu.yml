@@ -2,7 +2,7 @@
 # tasks file for git (Ubuntu specific)
 
 - name: Update package repositories
-  sudo: yes
+  become: true
   apt:
     update_cache: True
   tags:
@@ -10,7 +10,7 @@
     - update_cache
 
 - name: Install git packages
-  become: yes
+  become: true
   apt:
     name: "{{ item }}"
     state: present
